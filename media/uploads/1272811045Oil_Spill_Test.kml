@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>Oil Spill Test</name>
+  <description><![CDATA[]]></description>
+  <NetworkLink>
+    <name>Oil Spill Test</name>
+    <Link>
+      <href>http://maps.google.com/maps/ms?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;vps=3&amp;jsv=233a&amp;ie=UTF8&amp;hq=&amp;hnear=Eloi+Bay&amp;oe=UTF8&amp;msa=0&amp;msid=104397020366929149713.0004859d543a4f91d25ca&amp;output=kml</href>
+    </Link>
+  </NetworkLink>
+</Document>
+</kml>

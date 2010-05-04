@@ -1,0 +1,570 @@
+a1dd640884eb130bcf84ff624b543417d14b911c<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=7" />
+	<title>Gulf Oil Spill Tracker</title>
+	<link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/admin/all.css" />
+<link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/jquery-ui-themeroller.css" />
+<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/ie6.css" />
+<![endif]--><script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.js"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.form.js"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.ui.min.js"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/selectToUISlider.jQuery.js"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.hovertip-1.0.js"></script>
+<link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/jquery.hovertip-1.0.css" />
+<script type="text/javascript">
+		$(function() {
+			if($('.tooltip[title]') != null)
+			$('.tooltip[title]').hovertip();
+		});
+	</script><script type="text/javascript">jQuery.noConflict()</script><script type="text/javascript" src="http://oilspill.skytruth.org/media/js/protochart/prototype.js"></script>
+<!--[if IE]><script type="text/javascript" src="http://oilspill.skytruth.org/media/js/protochart/excanvas-compressed.js"></script>
+<![endif]--><script type="text/javascript" src="http://oilspill.skytruth.org/media/js/protochart/ProtoChart.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		// Date Picker JS
+jQuery(document).ready(function() {
+	jQuery("#dp1").datepicker({ 
+	    showOn: "both",
+		dateFormat: "yy-mm-dd",
+	    buttonImage: "http://oilspill.skytruth.org/media/img/icon-calendar.gif", 
+	    buttonImageOnly: true 
+	});
+	
+	jQuery("#dp2").datepicker({ 
+	    showOn: "both",
+		dateFormat: "yy-mm-dd",
+	    buttonImage: "http://oilspill.skytruth.org/media/img/icon-calendar.gif", 
+	    buttonImageOnly: true 
+	});
+});
+		function info_search(){
+			$("#info-search").submit();
+		}
+	</script>
+</head>
+<body>
+	<div class="holder">
+		<!-- header -->
+		<div id="header">
+			<!-- top-area -->
+			<div class="top">
+				<strong>Moderator</strong>
+				<ul>
+					<li class="none-separator"> Welcome, Administrator!</li>
+					<li class="none-separator"><a href="http://oilspill.skytruth.org/" title="View the home page">
+						View Site</a>					
+					<li class="none-separator"><a href="http://oilspill.skytruth.org/admin/profile/">My Profile</a></li>
+					<li><a href="log_out">Logout</a></li>
+				</ul>
+                        </div>
+                        
+			<!-- info-nav -->
+			<div class="info-nav">
+				<h3>Get Help</h3>
+				<ul>
+					<li ><a href="http://wiki.ushahididev.com/">Wiki</a></li>
+					<li><a href="http://wiki.ushahididev.com/doku.php?id=how_to_use_ushahidi_alpha">FAQ's</a></li>
+					<li><a href="http://forums.ushahidi.com/">Forum</a></li>
+				</ul>
+				<div class="info-search"><form action="http://oilspill.skytruth.org/admin/reports" id="info-search"><input type="text" name="k" class="info-keyword" value=""> <a href="javascript:info_search();" class="btn">Search</a></form></div>
+				<div style="clear:both"></div>
+			</div>
+			<!-- title -->
+			<h1>Gulf Oil Spill Tracker</h1>
+			<!-- nav-holder -->
+			<div class="nav-holder">
+				<!-- main-nav -->
+				<ul class="main-nav">
+					<li><a href="http://oilspill.skytruth.org/admin/dashboard" >
+						Dashboard						</a></li>
+					<li><a href="http://oilspill.skytruth.org/admin/reports" >
+						Reports						</a></li>
+					<li><a href="http://oilspill.skytruth.org/admin/comments" >
+						Comments						</a></li>
+					<li><a href="http://oilspill.skytruth.org/admin/messages" >
+						Messages						</a></li>
+					<li><a href="http://oilspill.skytruth.org/admin/feedback" >
+						Feedback						</a></li>
+					<li><a href="http://oilspill.skytruth.org/admin/stats" class="active">
+						Stats						</a></li>
+				</ul>
+				<!-- sub-nav -->
+				<ul class="sub-nav">
+											<li><a href="http://oilspill.skytruth.org/admin/settings/site">Settings</a></li>
+						<li><a href="http://oilspill.skytruth.org/admin/manage">Manage</a></li>
+						<li><a href="http://oilspill.skytruth.org/admin/users">Users</a></li>
+									</ul>
+			</div>
+		</div>
+		<!-- content -->
+		<div id="content">
+			<div class="bg">
+				
+<div class="bg">
+
+	<h2>Statistics <a href="http://oilspill.skytruth.org/admin/stats/hits">Visitor Summary</a> <a href="http://oilspill.skytruth.org/admin/stats/country">Country Breakdown</a> <a href="http://oilspill.skytruth.org/admin/stats/reports">Report Stats</a> <a href="http://oilspill.skytruth.org/admin/stats/impact">Category Impact</a></h2>
+	
+	<div class="content-wrap">
+	<h3>Visitors Summary</h3>
+	
+	<div id="time-period-selector">
+		<p>
+			<form method="get" action="http://oilspill.skytruth.org/admin/stats/hits/" style="display: inline;">
+				Choose a date range: <a href="http://oilspill.skytruth.org/admin/stats/hits/?range=30">1 MO</a> <a href="http://oilspill.skytruth.org/admin/stats/hits/?range=90">3 MO</a> <a href="http://oilspill.skytruth.org/admin/stats/hits/?range=180">6 MO</a>
+				<input type="text" class="dp" name="dp1" id="dp1" value="2010-04-04" />&nbsp;&nbsp;-&nbsp;&nbsp; 
+				<input type="text" class="dp" name="dp2" id="dp2" value="2010-05-03" /> 
+				<input type="hidden" name="range" value="30" />
+				<input type="hidden" name="active_tab" value="uniques" /> 
+				<input type="submit" value="Go &rarr;" class="button" />
+			</form>
+		</p>
+	</div>
+
+	<div class="chart-holder">
+		<script type="text/javascript" charset="utf-8">
+			Event.observe(window, 'load', function() {
+				data0 = new Array([1270353600000,0],[1270440000000,0],[1270526400000,0],[1270612800000,0],[1270699200000,0],[1270785600000,0],[1270872000000,0],[1270958400000,0],[1271044800000,0],[1271131200000,0],[1271217600000,0],[1271304000000,0],[1271390400000,0],[1271476800000,0],[1271563200000,4],[1271649600000,0],[1271736000000,0],[1271822400000,0],[1271908800000,0],[1271995200000,0],[1272081600000,0],[1272168000000,0],[1272254400000,0],[1272340800000,0],[1272427200000,0],[1272513600000,13],[1272600000000,4],[1272686400000,13],[1272772800000,16],[1272859200000,22]);
+			data1 = new Array([1270353600000,0],[1270440000000,0],[1270526400000,0],[1270612800000,0],[1270699200000,0],[1270785600000,0],[1270872000000,0],[1270958400000,0],[1271044800000,0],[1271131200000,0],[1271217600000,0],[1271304000000,0],[1271390400000,0],[1271476800000,0],[1271563200000,3],[1271649600000,0],[1271736000000,0],[1271822400000,0],[1271908800000,0],[1271995200000,0],[1272081600000,0],[1272168000000,0],[1272254400000,0],[1272340800000,0],[1272427200000,0],[1272513600000,4],[1272600000000,4],[1272686400000,7],[1272772800000,7],[1272859200000,13]);
+			data2 = new Array([1270353600000,0],[1270440000000,0],[1270526400000,0],[1270612800000,0],[1270699200000,0],[1270785600000,0],[1270872000000,0],[1270958400000,0],[1271044800000,0],[1271131200000,0],[1271217600000,0],[1271304000000,0],[1271390400000,0],[1271476800000,0],[1271563200000,25],[1271649600000,0],[1271736000000,0],[1271822400000,0],[1271908800000,0],[1271995200000,0],[1272081600000,0],[1272168000000,0],[1272254400000,0],[1272340800000,0],[1272427200000,0],[1272513600000,96],[1272600000000,17],[1272686400000,207],[1272772800000,66],[1272859200000,114]);
+			new Proto.Chart($('protochart_traffic'),[{label: "visits",  data: data0},{label: "uniques",  data: data1},{label: "pageviews",  data: data2},],{
+				xaxis: {mode: "time",
+				},legend: {show: true,
+				},
+				});		
+			});
+		</script>
+		<div id="protochart_traffic" style="width:884px;height:300px"></div>			</div>
+
+	<div class="stats-wrapper clearfix">
+		<div class="statistic first">
+			<h4>Unique Visitors</h4>
+			<p>38</p>
+		</div>
+		<div class="statistic">
+			<h4>Visits</h4>
+			<p>72</p>
+		</div>
+		<div class="statistic">
+			<h4>Pageviews</h4>
+			<p>525</p>
+		</div>
+	</div>
+
+	<!-- Left Column -->
+	<div class="two-col tc-left">
+		<div class="tabs">
+			<!-- tabset -->
+			<ul class="tabset">
+				<li><a class="active" href="http://oilspill.skytruth.org/admin/stats/hits/?range=30&dp1=2010-04-04&dp2=2010-05-03&active_tab=uniques">Unique Visitors</a></li>
+				<li><a  href="http://oilspill.skytruth.org/admin/stats/hits/?range=30&dp1=2010-04-04&dp2=2010-05-03&active_tab=visits">Visits</a></li>
+				<li><a  href="http://oilspill.skytruth.org/admin/stats/hits/?range=30&dp1=2010-04-04&dp2=2010-05-03&active_tab=pageviews">Pageviews</a></li>
+			</ul>
+
+			<div class="tab-boxes">
+							<div class="tab-box " id="visits">
+				<table class="table-graph horizontal-bar">
+									<tr>
+						<td class="hbItem">May 3rd, 2010</td>
+						<td class="hbDesc"><span style="width:30.6%" class="stat-bar">&nbsp;</span><span class="stat-percentage">30.6% (22)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">May 2nd, 2010</td>
+						<td class="hbDesc"><span style="width:22.2%" class="stat-bar">&nbsp;</span><span class="stat-percentage">22.2% (16)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">May 1st, 2010</td>
+						<td class="hbDesc"><span style="width:18.1%" class="stat-bar">&nbsp;</span><span class="stat-percentage">18.1% (13)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 30th, 2010</td>
+						<td class="hbDesc"><span style="width:5.6%" class="stat-bar">&nbsp;</span><span class="stat-percentage">5.6% (4)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 29th, 2010</td>
+						<td class="hbDesc"><span style="width:18.1%" class="stat-bar">&nbsp;</span><span class="stat-percentage">18.1% (13)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 28th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 27th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 26th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 25th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 24th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 23rd, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 22nd, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 21st, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 20th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 19th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 18th, 2010</td>
+						<td class="hbDesc"><span style="width:5.6%" class="stat-bar">&nbsp;</span><span class="stat-percentage">5.6% (4)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 17th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 16th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 15th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 14th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 13th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 12th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 11th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 10th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 9th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 8th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 7th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 6th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 5th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 4th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+									</table>
+				</div>
+								<div class="tab-box active-tab" id="uniques">
+				<table class="table-graph horizontal-bar">
+									<tr>
+						<td class="hbItem">May 3rd, 2010</td>
+						<td class="hbDesc"><span style="width:34.2%" class="stat-bar">&nbsp;</span><span class="stat-percentage">34.2% (13)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">May 2nd, 2010</td>
+						<td class="hbDesc"><span style="width:18.4%" class="stat-bar">&nbsp;</span><span class="stat-percentage">18.4% (7)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">May 1st, 2010</td>
+						<td class="hbDesc"><span style="width:18.4%" class="stat-bar">&nbsp;</span><span class="stat-percentage">18.4% (7)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 30th, 2010</td>
+						<td class="hbDesc"><span style="width:10.5%" class="stat-bar">&nbsp;</span><span class="stat-percentage">10.5% (4)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 29th, 2010</td>
+						<td class="hbDesc"><span style="width:10.5%" class="stat-bar">&nbsp;</span><span class="stat-percentage">10.5% (4)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 28th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 27th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 26th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 25th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 24th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 23rd, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 22nd, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 21st, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 20th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 19th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 18th, 2010</td>
+						<td class="hbDesc"><span style="width:7.9%" class="stat-bar">&nbsp;</span><span class="stat-percentage">7.9% (3)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 17th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 16th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 15th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 14th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 13th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 12th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 11th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 10th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 9th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 8th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 7th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 6th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 5th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 4th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+									</table>
+				</div>
+								<div class="tab-box " id="pageviews">
+				<table class="table-graph horizontal-bar">
+									<tr>
+						<td class="hbItem">May 3rd, 2010</td>
+						<td class="hbDesc"><span style="width:21.7%" class="stat-bar">&nbsp;</span><span class="stat-percentage">21.7% (114)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">May 2nd, 2010</td>
+						<td class="hbDesc"><span style="width:12.6%" class="stat-bar">&nbsp;</span><span class="stat-percentage">12.6% (66)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">May 1st, 2010</td>
+						<td class="hbDesc"><span style="width:39.4%" class="stat-bar">&nbsp;</span><span class="stat-percentage">39.4% (207)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 30th, 2010</td>
+						<td class="hbDesc"><span style="width:3.2%" class="stat-bar">&nbsp;</span><span class="stat-percentage">3.2% (17)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 29th, 2010</td>
+						<td class="hbDesc"><span style="width:18.3%" class="stat-bar">&nbsp;</span><span class="stat-percentage">18.3% (96)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 28th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 27th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 26th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 25th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 24th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 23rd, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 22nd, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 21st, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 20th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 19th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 18th, 2010</td>
+						<td class="hbDesc"><span style="width:4.8%" class="stat-bar">&nbsp;</span><span class="stat-percentage">4.8% (25)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 17th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 16th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 15th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 14th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 13th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 12th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 11th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 10th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 9th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 8th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 7th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 6th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 5th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+										<tr>
+						<td class="hbItem">Apr 4th, 2010</td>
+						<td class="hbDesc"><span style="width:0%" class="stat-bar">&nbsp;</span><span class="stat-percentage">0% (0)</span></td>
+					</tr>
+									</table>
+				</div>
+							</div>
+
+		</div>
+	</div>
+
+	<!-- Right Column -->
+	<div class="two-col tc-right glossary">
+		<h4>Glossary</h4>
+		<div class="terms">
+			<p><strong>Unique Visitors:</strong> The number of individuals coming to your instance; Unique Visitors are determined using cookies. In the case that a visitor does not have cookies enabled, they will be identified using a simple heuristic taking into account IP address, resolution, browser, plugins, OS, etc.</p>
+			<p><strong>Visits:</strong> A visit is a record of a unique visitor coming to the site more than 30 minutes past his/her last pageview.</p>
+			<p><strong>Pageviews:</strong> The total number of pages that visitors have viewed on your site.</p>
+		</div>
+	</div>
+	<div style="clear:both;"></div>
+	<br /><br />
+
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="holder">
+			<strong>
+				<a href="http://www.ushahidi.com" target="_blank" title="Ushahidi Engine" alt="Ushahidi Engine">
+                	<sup>1.0.1</sup>
+            	</a>
+			</strong>
+		</div>
+	</div>
+</body>
+</html>

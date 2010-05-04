@@ -1,0 +1,261 @@
+0ca99229758e5ccb41f4a2e641452357c16f4d80<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=7" />
+	<title>Gulf Oil Spill Tracker</title>
+	<link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/admin/all.css" />
+<link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/jquery-ui-themeroller.css" />
+<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/ie6.css" />
+<![endif]--><script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.js"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.form.js"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.ui.min.js"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/selectToUISlider.jQuery.js"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.hovertip-1.0.js"></script>
+<link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/jquery.hovertip-1.0.css" />
+<script type="text/javascript">
+		$(function() {
+			if($('.tooltip[title]') != null)
+			$('.tooltip[title]').hovertip();
+		});
+	</script>	<script type="text/javascript" charset="utf-8">
+		
+/**
+ * Form Utilities js file
+ *
+ * Common form functions for admin dashboard pages.
+ *
+ * PHP version 5
+ * LICENSE: This source file is subject to LGPL license 
+ * that is available through the world-wide-web at the following URI:
+ * http://www.gnu.org/copyleft/lesser.html
+ * @author     Ushahidi Team <team@ushahidi.com> 
+ * @package    Ushahidi - http://source.ushahididev.com
+ * @module     API Controller
+ * @copyright  Ushahidi - http://www.ushahidi.com
+ * @license    http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License (LGPL) 
+ */
+ 				
+$(document).ready(function()
+{		
+	$(".hide").click(function () {
+		$("#submitStatus").hide();
+		return false;
+	});
+});
+
+// Check All / Check None
+function CheckAll( id, name )
+{
+	// TODO use the given name in the jQuery selector
+	//$("INPUT[name='" + name + "'][type='checkbox']").attr('checked', $('#' + id).is(':checked'));
+	$("td > input:checkbox").attr('checked', $('#' + id).is(':checked'));
+}
+
+//check if a checkbox has been ticked.
+function isChecked( id )
+{
+	//var checked = $("input[id="+id+"]:checked").length
+	var checked = $("td > input:checked").length
+	
+	if( checked == 0 )
+	return false
+	
+	else 
+	return true
+}
+
+	// Ajax Submission
+	function commentAction ( action, confirmAction, comment_id )
+	{
+		var statusMessage;
+		if( !isChecked( "comment" ) && comment_id=='' )
+		{ 
+			alert('Please select at least one comment.');
+		} else {
+			var answer = confirm('Are You Sure You Want To ' + confirmAction + "?")
+			if (answer){
+				// Set Submit Type
+				$("#action").attr("value", action);
+			
+				if (comment_id != '') 
+				{
+					// Submit Form For Single Item
+					$("#comment_single").attr("value", comment_id);
+					$("#commentMain").submit();
+				}
+				else
+				{
+					// Set Hidden form item to 000 so that it doesn't return server side error for blank value
+					$("#comment_single").attr("value", "000");
+					// Submit Form For Multiple Items
+					$("#commentMain").submit();
+				}
+		
+			} else {
+				return false;
+			}
+		}
+	}
+
+
+
+		function info_search(){
+			$("#info-search").submit();
+		}
+	</script>
+</head>
+<body>
+	<div class="holder">
+		<!-- header -->
+		<div id="header">
+			<!-- top-area -->
+			<div class="top">
+				<strong>Moderator</strong>
+				<ul>
+					<li class="none-separator"> Welcome, Administrator!</li>
+					<li class="none-separator"><a href="http://oilspill.skytruth.org/" title="View the home page">
+						View Site</a>					
+					<li class="none-separator"><a href="http://oilspill.skytruth.org/admin/profile/">My Profile</a></li>
+					<li><a href="log_out">Logout</a></li>
+				</ul>
+                        </div>
+                        
+			<!-- info-nav -->
+			<div class="info-nav">
+				<h3>Get Help</h3>
+				<ul>
+					<li ><a href="http://wiki.ushahididev.com/">Wiki</a></li>
+					<li><a href="http://wiki.ushahididev.com/doku.php?id=how_to_use_ushahidi_alpha">FAQ's</a></li>
+					<li><a href="http://forums.ushahidi.com/">Forum</a></li>
+				</ul>
+				<div class="info-search"><form action="http://oilspill.skytruth.org/admin/reports" id="info-search"><input type="text" name="k" class="info-keyword" value=""> <a href="javascript:info_search();" class="btn">Search</a></form></div>
+				<div style="clear:both"></div>
+			</div>
+			<!-- title -->
+			<h1>Gulf Oil Spill Tracker</h1>
+			<!-- nav-holder -->
+			<div class="nav-holder">
+				<!-- main-nav -->
+				<ul class="main-nav">
+					<li><a href="http://oilspill.skytruth.org/admin/dashboard" >
+						Dashboard						</a></li>
+					<li><a href="http://oilspill.skytruth.org/admin/reports" >
+						Reports						</a></li>
+					<li><a href="http://oilspill.skytruth.org/admin/comments" class="active">
+						Comments						</a></li>
+					<li><a href="http://oilspill.skytruth.org/admin/messages" >
+						Messages						</a></li>
+					<li><a href="http://oilspill.skytruth.org/admin/feedback" >
+						Feedback						</a></li>
+					<li><a href="http://oilspill.skytruth.org/admin/stats" >
+						Stats						</a></li>
+				</ul>
+				<!-- sub-nav -->
+				<ul class="sub-nav">
+											<li><a href="http://oilspill.skytruth.org/admin/settings/site">Settings</a></li>
+						<li><a href="http://oilspill.skytruth.org/admin/manage">Manage</a></li>
+						<li><a href="http://oilspill.skytruth.org/admin/users">Users</a></li>
+									</ul>
+			</div>
+		</div>
+		<!-- content -->
+		<div id="content">
+			<div class="bg">
+							<div class="bg">
+				<h2>Comments <span>(0)</span></h2>
+				<!-- tabs -->
+				<div class="tabs">
+					<!-- tabset -->
+					<ul class="tabset">
+						<li><a href="?status=0" >Show All</a></li>
+						<li><a href="?status=p" class="active">Pending</a></li>
+						<li><a href="?status=a" >Approved</a></li>
+						<li><a href="?status=s" >Spam</a></li>
+					</ul>
+					<!-- tab -->
+					<div class="tab">
+						<ul>
+							<li><a href="#" onclick="commentAction('a','APPROVE', '');">APPROVE</a></li>
+							<li><a href="#" onclick="commentAction('u','UNAPPROVE', '');">UNAPPROVE</a></li>
+							<li><a href="#" onclick="commentAction('s','MARK AS SPAM', '');">SPAM</a></li>
+							<li><a href="#" onclick="commentAction('n','MARK AS NOT SPAM', '');">NOT SPAM</a></li>
+							<li><a href="#" onclick="commentAction('d','DELETE', '');">DELETE</a></li>
+													</ul>
+					</div>
+				</div>
+								<!-- report-table -->
+				<form action="http://oilspill.skytruth.org/admin/comments?status=p" method="post" id="commentMain" name="commentMain">
+					<input type="hidden" name="action" id="action" value="">
+					<input type="hidden" name="comment_id[]" id="comment_single" value="">
+					<div class="table-holder">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="col-1"><input id="checkallcomments" type="checkbox" class="check-box" onclick="CheckAll( this.id, 'comment_id[]' )" /></th>
+									<th class="col-2">Comment Details</th>
+									<th class="col-3">Date</th>
+									<th class="col-4">Actions</th>
+								</tr>
+							</thead>
+							<tfoot>
+								<tr class="foot">
+									<td colspan="4">
+										
+<ul class="pager">
+
+	<li class="first">0 pages</li>
+
+	
+
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	
+</ul>									</td>
+								</tr>
+							</tfoot>
+							<tbody>
+																	<tr>
+										<td colspan="4" class="col">
+											<h3>No Results To Display!</h3>
+										</td>
+									</tr>
+															</tbody>
+						</table>
+					</div>
+				</form>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="holder">
+			<strong>
+				<a href="http://www.ushahidi.com" target="_blank" title="Ushahidi Engine" alt="Ushahidi Engine">
+                	<sup>1.0.1</sup>
+            	</a>
+			</strong>
+		</div>
+	</div>
+</body>
+</html>

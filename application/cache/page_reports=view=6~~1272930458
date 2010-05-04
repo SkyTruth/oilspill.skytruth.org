@@ -1,0 +1,323 @@
+06e738e9bc1c74cd8689fd6afd2209f37c9e972c
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Gulf Oil Spill Tracker</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/style.css" />
+<link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/jquery-ui-themeroller.css" />
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/iehacks.css" />
+<![endif]--><!--[if IE 7]><link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/ie7hacks.css" />
+<![endif]--><!--[if IE 6]><link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/ie6hacks.css" />
+<![endif]--><script type="text/javascript" src="http://oilspill.skytruth.org/media/js/OpenLayers.js"></script>
+<script type="text/javascript">OpenLayers.ImgPath = 'http://oilspill.skytruth.org/media/img/openlayers/';</script><script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.js"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.ui.min.js"></script>
+<script src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAA9E7RFHw8xvp1qJV2sqmcnhRzLYtVAEvZxjHSR41mZtuamhVQghSkixo_dpWZfJxxjhJsEwWBcmEhTw" type="text/javascript"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/photoslider.js"></script>
+<link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/photoslider.css" />
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/coda-slider.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/videoslider.css" />
+<link rel="alternate" type="application/rss+xml" href="http://oilspill.skytruth.org/feed/" title="RSS2" /><link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/themes/skytruth/style.css" />
+
+	<!--[if IE 6]>
+	<script type="text/javascript" src="js/ie6pngfix.js"></script>
+	<script type="text/javascript">DD_belatedPNG.fix('img, ul, ol, li, div, p, a');</script>
+	<![endif]-->
+	<script type="text/javascript">
+		var addthis_config = {
+		   ui_click: true
+		}	
+		eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('d 9;10(j(){d 2o=2n;V=["2m.W "];C.B.2p="o://k.p.m/y/2q/";C.B.1F={\'H\':{}};2t(d i=0;i<V.2s;i++){C.B.1F[\'H\'][i]={\'2r\':V[i],\'2l\':V[i].1q(\'.W\',\'2k.W\')}}C.B.2e(\'H\');C.B.2d(\'H\');d 13=7 5.1A(\'1x:2c\');d 1C=7 5.1A(\'1x:2b\');d 1z={2f:"2g",2j:16,2i:[],1u:1C,\'17\':13};9=7 5.2h(\'9\',1z);9.w(7 5.x.2u({2v:7 5.1t(2I,2a)}));d O=1;l(O==2){E=7 5.G.2H("2G",{Q:e,R:7 5.S(-b.34,-b.34,b.34,b.34)})}A l(O==3){E=7 5.G.2J("2K",{Q:e,R:7 5.S(-b.34,-b.34,b.34,b.34)})}A l(O==4){E=7 5.G.2N.2M("2L",{Q:e,R:7 5.S(-b.34,-b.34,b.34,b.34)})}A{E=7 5.G.2F("2E",{Q:e,R:7 5.S(-b.34,-b.34,b.34,b.34)})}9.1n(E);9.w(7 5.x.2y());9.w(7 5.x.2x());9.w(7 5.x.2w());9.w(7 5.x.2z());1p=7 5.2A({2D:"8",2C:"${18}",2B:"1",2O:"#25",1W:1,1U:0.8},{23:{18:j(c){l(21(c)!=\'29\'&&c.K.h==6){1R"#1X"}A{1R"#24"}}}});d Y=7 5.G.1Z("1V 22","o://k.p.m/1f/?i=6",{28:5.20.27,1u:9.17,1Y:7 5.26({"H":1p})});9.1n(Y);L=7 5.x.33(Y,{3J:1O,3I:1h});9.w(L);L.3H();d 15=7 5.1I(-3K.3L,30.3N);15.3M(13,9.3G());9.3F(15,8);j 1i(3z){L.3y(1v)}j 1O(c){1v=c;12=c.1j.1k().1o();v=12.v;t=12.t;d f="<r 11=\\"3x\\"><r 11=\\"3A\\"><1a><1b>"+c.3B.3E+"</1b></1a></r>";f=f+"\\n<r 11=\\"3D\\"><a 1m=\'1l:Z("+v+","+t+", 1)\'>1r&u;3P</a>&u;&u;|&u;&u;<a 1m=\'1l:Z("+v+","+t+", -1)\'>1r&u;2P</a></r>";f=f+"</r>";l(f.3O("<3X")!=-1){f="3Y 3U 3Q! 3S f 3T.<3R />"+f.1q(/</g,"&40;")}s=7 5.3V.3Z("3W",c.1j.1k().1o(),7 5.1t(1s,1s),f,19,e,1i);c.s=s;9.3C(s)}j 1h(c){9.3v(c.s);c.s.35();c.s=19}$("#3w").32({36:{1c:{q:e,U:3},1e:{q:e,1d:e},1Q:{q:e,U:3},1y:{q:e}},37:{1c:{q:"F D 3a 1g",U:"1N 1g 1P 39 38 1S 1K 3 1L"},1e:{q:"F D 31 1B 1T",1d:"F D a 2Z 1B 1T"},1Q:{q:"F D a 1M",U:"1N 1M 1P 2T 1S 1K 3 1L 2S"},1y:{q:"F D 2R 2Q 2U"}}})});j Z(v,t,1E){d 1H=7 5.1I(v,t);9.2V(1H);1G=9.2Y();1J=1G+1E;9.2X(1J)}10(2W).3b("3c",j(){10("r#3p").3o()});j T(h,14,J,X){$(\'#\'+X).M(\'<z I="o://k.p.m/y/z/3n.3q">\');$.3r("o://k.p.m/3u/T/"+h,{14:14,J:J},j(K){l(K.3t==\'3s\'){l(J==\'3m\'){$(\'#3l\'+h).N("I","o://k.p.m/y/z/1D.P");$(\'#3f\'+h).N("I","o://k.p.m/y/z/1w.P");$(\'#3e\'+h).M(K.T)}A l(J==\'3d\'){$(\'#3g\'+h).N("I","o://k.p.m/y/z/1D.P");$(\'#3h\'+h).N("I","o://k.p.m/y/z/1w.P");$(\'#3k\'+h).M(K.T)}}A{3j(\'3i!\')}$(\'#\'+X).M(\'\')},"1f")}',62,249,'|||||OpenLayers||new||map||20037508|feature|var|true|content||id||function|oilspill|if|org||http|skytruth|required|div|popup|lat|nbsp|lon|addControl|Control|media|img|else|Slider|FOTO|enter|map_layer|Please|Layer|default|src|type|data|selectControl|html|attr|default_map|png|sphericalMercator|maxExtent|Bounds|rating|minlength|photos|jpg|loader|markers|zoomToSelectedFeature|jQuery|class|zoom_point|proj_4326|action|myPoint||displayProjection|color|null|ul|li|comment_author|email|comment_email|json|Name|onFeatureUnselect|onPopupClose|geometry|getBounds|javascript|href|addLayer|getCenterLonLat|style|replace|Zoom|100|Size|projection|selectedFeature|gray_down|EPSG|captcha|options|Projection|Email|proj_900913|gray_up|zoomfactor|bucket|currZoom|lonlat|LonLat|newZoom|least|characters|Comment|Your|onFeatureSelect|must|comment_description|return|at|Address|strokeOpacity|single|strokeWidth|CC0000|styleMap|GML|Format|typeof|report|context|FF9933|000000|StyleMap|GeoJSON|format|undefined|366|900913|4326|preloadImages|reload|units|dd|Map|controls|numZoomLevels|_t|thumb|6_1_1272592387|false|moved|baseURL|uploads|main|length|for|LoadingPanel|minSize|MousePosition|PanZoomBar|Navigation|LayerSwitcher|Style|fillOpacity|fillColor|pointRadius|google|Google|virtualearth|VirtualEarth|573|Yahoo|yahoo|openstreetmap|Mapnik|OSM|strokeColor|Out|Security|the|long|be|Code|panTo|window|zoomTo|getZoom|valid||an|validate|SelectFeature||destroy|rules|messages|of|consist|your|bind|load|comment|orating_|odown_|cup_|cdown_|ERROR|alert|crating_|oup_|original|loading_g|codaSlider|slider1|gif|post|saved|status|reports|removePopup|commentForm|infowindow|unselect|evt|infowindow_list|attributes|addPopup|infowindow_meta|name|setCenter|getProjectionObject|activate|onUnselect|onSelect|88|956299|transform|306503|search|In|Javascript|br|Escaped|below|contained|Popup|chicken|script|Content|FramedCloud|lt'.split('|')))
+
+	</script>
+</head>
+
+<body id="page">
+	<!-- wrapper -->
+	<div class="rapidxwpr floatholder">
+
+		<!-- header -->
+		<div id="header">
+	
+			<!-- searchbox -->
+			<div id="searchbox">
+				<a class="share addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aee423643f8276e">Share</a>
+
+				<!-- languages -->
+				<div class="language-box">
+					<form>
+						<select id="l" name="l"  onChange="this.form.submit()" >
+<option value="es_UY">español, castellano (UY)</option>
+<option value="en_US" selected="selected">English (US)</option>
+<option value="fr_FR">français (FR)</option>
+</select>					</form>
+				</div>
+				<!-- / languages -->
+			
+				<!-- searchform -->
+				<div class="search-form">
+					<form method="get" id="search" action="http://oilspill.skytruth.org/search/">
+						<ul>
+							<li><input type="text" name="k" value="" class="text" /></li>
+							<li><input type="submit" name="b" class="searchbtn" value="search" /></li>
+						</ul>
+					</form>
+				</div>
+				<!-- / searchform -->
+		
+			</div>
+			<!-- / searchbox -->
+		
+			<!-- logo -->
+			<div id="logo">
+				<h1><img src="http://oilspill.skytruth.org/themes/skytruth/tracker_logo.png" alt="Gulf Oil Spill Tracker"/></h1>
+			</div>
+			<!-- / logo -->
+		
+			<!-- submit incident -->
+			<div class="submit-incident clearingfix">
+				<a href="http://oilspill.skytruth.org/reports/submit">Submit an Incident</a>
+			</div>
+			<!-- / submit incident -->
+		</div>
+		<!-- / header -->
+
+		<!-- main body -->
+		<div id="middle">
+			<div class="background layoutleft">
+		
+				<!-- mainmenu -->
+				<div id="mainmenu" class="clearingfix">
+					<ul>
+						<li><a href="http://oilspill.skytruth.org/main" >Home</a></li>
+						<li><a href="http://oilspill.skytruth.org/reports" class="active">Reports</a></li>
+						<li><a href="http://oilspill.skytruth.org/reports/submit" >Submit an Incident</a></li>
+						<li><a href="http://oilspill.skytruth.org/alerts" >Get Alerts</a></li>
+													<li><a href="http://oilspill.skytruth.org/contact" >Contact Us</a></li>
+														<li><a href="http://oilspill.skytruth.org/help" >How to Help</a></li>
+							<li><a href="http://oilspill.skytruth.org/page/index/1" >About Us</a></li>					</ul>
+
+				</div>
+				<!-- / mainmenu -->
+				<div id="main" class="clearingfix">
+					<div id="mainmiddle" class="floatbox withright">
+						<!-- start incident block -->
+						<div class="reports">
+							<div class="report-details">
+								<div class="verified ">
+									Verified<br/>
+									<span>NO</span>								</div>
+								<h1>Picture test</h1>
+								<ul class="details">
+									<li>
+										<small>Location</small>
+										Sample Location									</li>
+									<li>
+										<small>Date</small>
+										Apr 29 2010									</li>
+									<li>
+										<small>Time</small>
+										09:49									</li>
+									<li>
+										<small>Category</small>
+										<a href="http://oilspill.skytruth.org/reports/?c=11">Oil in the Water</a>&nbsp;&nbsp;&nbsp;<a href="http://oilspill.skytruth.org/reports/?c=12">Oil on Land</a>&nbsp;&nbsp;&nbsp;									</li>
+								</ul>
+							</div>
+							<div class="location">
+								<div class="incident-notation clearingfix">
+									<ul>
+										<li><img align="absmiddle" alt="Incident" src="http://oilspill.skytruth.org/media/img/incident-pointer.jpg"/> Incident</li>
+										<li><img align="absmiddle" alt="Nearby Incident" src="http://oilspill.skytruth.org/media/img/nearby-incident-pointer.jpg"/> Nearby Incident</li>
+									</ul>
+								</div>
+								<div class="report-map">
+									<div class="map-holder" id="map"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+				<div class="report-description">
+					<h3>Incident Report Description</h3>
+						<div class="content">
+							test							<div class="credibility">
+								Credibility:
+								<a href="javascript:rating('6','add','original','oloader_6')"><img id="oup_6" src="http://oilspill.skytruth.org/media/img/thumb-up.jpg" alt="UP" title="UP" border="0" /></a>&nbsp;
+								<a href="javascript:rating('6','subtract','original')"><img id="odown_6" src="http://oilspill.skytruth.org/media/img/thumb-down.jpg" alt="DOWN" title="DOWN" border="0" /></a>&nbsp;
+								<a href="" class="rating_value" id="orating_6">1</a>
+								<a href="" id="oloader_6" class="rating_loading" ></a>
+							</div>
+						</div>
+					<div class="orig-report">
+						<div class="discussion">
+							<h5>ADDITIONAL REPORTS AND DISCUSSION&nbsp;&nbsp;&nbsp;(<a href="#comments">Add</a>)</h5>
+							<div class="discussion-box"><p><strong>Pablo</strong>&nbsp;(Apr 29 2010)</p><p>Mee tooo</p><div class="report_rating">	<div>	Credibility:&nbsp;	<a href="javascript:rating('1','add','comment','cloader_1')"><img id="cup_1" src="http://oilspill.skytruth.org/media/img/up.png" alt="UP" title="UP" border="0" /></a>&nbsp;	<a href="javascript:rating('1','subtract','comment','cloader_1')"><img id="cdown_1" src="http://oilspill.skytruth.org/media/img/down.png" alt="DOWN" title="DOWN" border="0" /></a>&nbsp;	</div>	<div class="rating_value" id="crating_1">0</div>	<div id="cloader_1" class="rating_loading" ></div></div></div>						</div>
+					</div>		
+				</div>
+				<!-- end incident block <> start other report -->
+		
+				<div class="blocks-holder">
+										<!-- start images -->
+					<div class="small-block images">
+						<h3>Images</h3>
+						<div class="photoslider" id="default"></div>
+					</div>
+					<!-- end images <> start side block -->
+										</div>
+					<div class="report_right">
+						<div class="small-block">
+							<h3>Incident Report(s)</h3>
+							<table>
+								<tr class="title">
+									<th class="w-01">TITLE</th>
+									<th class="w-02">LOCATION</th>
+									<th class="w-03">DATE</th>
+								</tr>
+								<tr><td class="w-01"><a href="http://oilspill.skytruth.org/reports/view/3">Test Incident</a></td><td class="w-02">Sample Location</td><td class="w-03">Apr 29 2010</td></tr><tr><td class="w-01"><a href="http://oilspill.skytruth.org/reports/view/4">Test Incident</a></td><td class="w-02">Sample Location</td><td class="w-03">Apr 29 2010</td></tr><tr><td class="w-01"><a href="http://oilspill.skytruth.org/reports/view/5">Another incident</a></td><td class="w-02">Sample Location</td><td class="w-03">Apr 29 2010</td></tr><tr><td class="w-01"><a href="http://oilspill.skytruth.org/reports/view/6">Picture test</a></td><td class="w-02">Sample Location</td><td class="w-03">Apr 29 2010</td></tr><tr><td class="w-01"><a href="http://oilspill.skytruth.org/reports/view/7">Test _ Chad</a></td><td class="w-02">Eloi Bay</td><td class="w-03">Apr 30 2010</td></tr>							</table>
+						</div>
+					</div>
+						
+												<!-- end side block -->
+					
+					
+						<!-- start videos -->
+												<!-- end incident block <> start other report -->
+					</div>
+					<br />
+					<!-- end incident block <> start other report -->
+					<a name="comments"></a>
+					<div class="big-block">
+						<div id="comments" class="report_comment">
+													<form action="http://oilspill.skytruth.org/reports/view/6" method="post" id="commentForm" name="commentForm">
+						<div class="report_row">
+							<strong>Name:</strong><br />
+							<input type="text" id="comment_author" name="comment_author" value=""  class="text" />						</div>
+						<div class="report_row">
+							<strong>E-Mail:</strong><br />
+							<input type="text" id="comment_email" name="comment_email" value=""  class="text" />						</div>
+						<div class="report_row">
+							<strong>Comments:</strong><br />
+							<textarea id="comment_description" name="comment_description"  rows="4" cols="40" class="textarea long" ></textarea>						</div>
+						<div class="report_row">
+							<strong>Security Code:</strong><br />
+							<img alt="Captcha" src="http://oilspill.skytruth.org/captcha/default" width="150" height="50" /><br />
+							<input type="text" id="captcha" name="captcha" value=""  class="text" />						</div>
+						<div class="report_row">
+							<input name="submit" type="submit" value="Submit Comment" class="btn_blue" />
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+     
+ 
+	<!-- footer -->
+	<div id="footer" class="clearingfix">
+ 
+		<div id="underfooter"></div>
+ 
+		<!-- footer content -->
+		<div class="rapidxwpr floatholder">
+ 
+			<!-- footer credits -->
+			<div class="footer-credits">
+				Hosted by <br/><img src="http://oilspill.skytruth.org//media/img/skytruth-logo.gif" /><br/><br/>
+				Powered by <br/><a href="http://www.ushahidi.com/"><img src="http://oilspill.skytruth.org//media/img/footer-logo.png" alt="Ushahidi" align="absmiddle" /></a>
+			</div>
+			<!-- / footer credits -->
+		
+			<!-- footer menu -->
+			<div class="footermenu">
+				<ul class="clearingfix">
+					<li><a class="item1" href="http://oilspill.skytruth.org/">Home</a></li>
+					<li><a href="http://oilspill.skytruth.org/reports/submit">Report an Incident</a></li>
+					<li><a href="http://oilspill.skytruth.org/alerts">Get Alerts</a></li>
+					<li><a href="http://oilspill.skytruth.org/help">How to Help</a></li>
+					<li><a href="http://oilspill.skytruth.org/page/index/1">About </a></li>
+					<li><a href="http://oilspill.skytruth.org/contact">Contact Us</a></li>
+				</ul>
+				<p>Copyright © 2010 Skytruth.org. All Rights Reserved.</p>
+			</div>
+			<!-- / footer menu -->
+ 
+			<!-- feedback form -->
+			<h2 class="feedback_title" style="clear:both">
+				<a href="javascript:showForm('table-holder')">Provide Feedback</a>
+			</h2>
+			<div id="table-holder" class="feedback_forms">
+				<h2>Provide Feedback <button style="margin-left:2em" onclick="javascript:showForm('table-holder')">Close</button></h2>
+				<form action="http://oilspill.skytruth.org/reports/view/6" method="post" id="footerfeedbackMain" name="footerfeedbackMain">
+				<input type="hidden" name="person_ip" value="68.15.88.196"  />
+				<table class="table">
+					<tbody>
+						<tr>
+							<td>
+								<textarea id="feedback_message" name="feedback_message"  class="textarea long" rows="5" cols="50"></textarea>								<br /><br />
+															</td>
+							<!-- PRW td>
+								<div class="or_txt">
+									Or
+								</div>
+							</td PRW -->
+							<!-- PRW td>
+								<div class="detailed_feedback">
+									<a href="http://feedback.ushahidi.com/fillsurvey.php?sid=5">Provide Detailed Feedback</a>
+								</div>
+							</td PRW -->
+						</tr>
+						<tr>
+							<td>
+								<div class="report_row">
+									<strong>Security Code:</strong><br />
+									<img alt="Captcha" src="http://oilspill.skytruth.org/captcha/default" width="150" height="50" /><br />
+									<input type="text" id="feedback_captcha" name="feedback_captcha" value=""  class="text" />									<br /><br />
+																	</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3">
+																<input type="text" id="person_email" name="person_email" value="Email address" size="40" class="text"  onclick="clearField();" />								
+<button id="submit" name="submit" >Send</button>								<br /><br />
+															</td>
+						</tr>
+					</tbody>
+				</table>
+				</form>
+			</div>
+			<!-- /feedback form -->
+ 
+		</div>
+		<!-- / footer content -->
+ 
+	</div>
+	<!-- / footer -->
+ 
+	<img src="http://tracker.ushahidi.com/track.php?url=oilspill.skytruth.org%2Findex.php%2Freports%2Fview%2F6&lang=en_US&version=1.0.1" />
+	<!-- Piwik -->
+		<script type="text/javascript">
+		var pkBaseURL = (("https:" == document.location.protocol) ? "https://tracker.ushahidi.com/piwik/" : "http://tracker.ushahidi.com/piwik/");
+		document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+		
+		</script><script type="text/javascript">
+		try {
+		  var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1598);
+		  piwikTracker.trackPageView();
+		  piwikTracker.enableLinkTracking();
+		} catch( err ) {}
+		</script><noscript><p><img src="http://tracker.ushahidi.com/piwik/piwik.php?idsite=1598" style="border:0" alt=""/></p></noscript>
+		
+		<!-- End Piwik Tag -->
+				
+	<!-- Task Scheduler -->
+	<img src="http://oilspill.skytruth.org/scheduler" height="1" width="1" border="0" />
+ 
+        <!-- script for share button -->
+        <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=ushahidi"></script>
+</body>
+</html>

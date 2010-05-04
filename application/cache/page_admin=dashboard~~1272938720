@@ -1,0 +1,263 @@
+2835c725fde79eeed7f4015749385298e111501b<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=7" />
+	<title>Gulf Oil Spill Tracker</title>
+	<link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/admin/all.css" />
+<link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/jquery-ui-themeroller.css" />
+<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/ie6.css" />
+<![endif]--><script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.js"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.form.js"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.ui.min.js"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/selectToUISlider.jQuery.js"></script>
+<script type="text/javascript" src="http://oilspill.skytruth.org/media/js/jquery.hovertip-1.0.js"></script>
+<link rel="stylesheet" type="text/css" href="http://oilspill.skytruth.org/media/css/jquery.hovertip-1.0.css" />
+<script type="text/javascript">
+		$(function() {
+			if($('.tooltip[title]') != null)
+			$('.tooltip[title]').hovertip();
+		});
+	</script><script type="text/javascript">jQuery.noConflict()</script><script type="text/javascript" src="http://oilspill.skytruth.org/media/js/protochart/prototype.js"></script>
+<!--[if IE]><script type="text/javascript" src="http://oilspill.skytruth.org/media/js/protochart/excanvas-compressed.js"></script>
+<![endif]--><script type="text/javascript" src="http://oilspill.skytruth.org/media/js/protochart/ProtoChart.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		// Date Picker JS
+jQuery(document).ready(function() {
+	jQuery("#dp1").datepicker({ 
+	    showOn: "both",
+		dateFormat: "yy-mm-dd",
+	    buttonImage: "http://oilspill.skytruth.org/media/img/icon-calendar.gif", 
+	    buttonImageOnly: true 
+	});
+	
+	jQuery("#dp2").datepicker({ 
+	    showOn: "both",
+		dateFormat: "yy-mm-dd",
+	    buttonImage: "http://oilspill.skytruth.org/media/img/icon-calendar.gif", 
+	    buttonImageOnly: true 
+	});
+});
+		function info_search(){
+			$("#info-search").submit();
+		}
+	</script>
+</head>
+<body>
+	<div class="holder">
+		<!-- header -->
+		<div id="header">
+			<!-- top-area -->
+			<div class="top">
+				<strong>Moderator</strong>
+				<ul>
+					<li class="none-separator"> Welcome, Administrator!</li>
+					<li class="none-separator"><a href="http://oilspill.skytruth.org/" title="View the home page">
+						View Site</a>					
+					<li class="none-separator"><a href="http://oilspill.skytruth.org/admin/profile/">My Profile</a></li>
+					<li><a href="log_out">Logout</a></li>
+				</ul>
+                        </div>
+                        
+			<!-- info-nav -->
+			<div class="info-nav">
+				<h3>Get Help</h3>
+				<ul>
+					<li ><a href="http://wiki.ushahididev.com/">Wiki</a></li>
+					<li><a href="http://wiki.ushahididev.com/doku.php?id=how_to_use_ushahidi_alpha">FAQ's</a></li>
+					<li><a href="http://forums.ushahidi.com/">Forum</a></li>
+				</ul>
+				<div class="info-search"><form action="http://oilspill.skytruth.org/admin/reports" id="info-search"><input type="text" name="k" class="info-keyword" value=""> <a href="javascript:info_search();" class="btn">Search</a></form></div>
+				<div style="clear:both"></div>
+			</div>
+			<!-- title -->
+			<h1>Gulf Oil Spill Tracker</h1>
+			<!-- nav-holder -->
+			<div class="nav-holder">
+				<!-- main-nav -->
+				<ul class="main-nav">
+					<li><a href="http://oilspill.skytruth.org/admin/dashboard" class="active">
+						Dashboard						</a></li>
+					<li><a href="http://oilspill.skytruth.org/admin/reports" >
+						Reports						</a></li>
+					<li><a href="http://oilspill.skytruth.org/admin/comments" >
+						Comments						</a></li>
+					<li><a href="http://oilspill.skytruth.org/admin/messages" >
+						Messages						</a></li>
+					<li><a href="http://oilspill.skytruth.org/admin/feedback" >
+						Feedback						</a></li>
+					<li><a href="http://oilspill.skytruth.org/admin/stats" >
+						Stats						</a></li>
+				</ul>
+				<!-- sub-nav -->
+				<ul class="sub-nav">
+											<li><a href="http://oilspill.skytruth.org/admin/settings/site">Settings</a></li>
+						<li><a href="http://oilspill.skytruth.org/admin/manage">Manage</a></li>
+						<li><a href="http://oilspill.skytruth.org/admin/users">Users</a></li>
+									</ul>
+			</div>
+		</div>
+		<!-- content -->
+		<div id="content">
+			<div class="bg">
+							<div class="bg">
+				<h2>Dashboard</h2>
+				<!-- column -->
+				<div class="column">
+					
+					<!-- box -->
+					<div class="box">
+						<h3>Reports Timeline</h3>
+						<ul class="inf" style="margin-bottom:10px;">
+							<li class="none-separator">View:<a href="http://oilspill.skytruth.org/admin/dashboard/?range=1">Today</a></li>
+							<li><a href="http://oilspill.skytruth.org/admin/dashboard/?range=31">Past Month</a></li>
+							<li><a href="http://oilspill.skytruth.org/admin/dashboard/?range=365">Past Year</a></li>
+						</ul>
+						<div class="chart-holder" style="clear:both;padding-left:5px;">
+							<script type="text/javascript" charset="utf-8">
+			Event.observe(window, 'load', function() {
+				data0 = new Array([1272513600000,4],[1272600000000,2],[1272686400000,1],[1272772800000,1],[1272859200000,2]);
+			new Proto.Chart($('protochart_report_chart'),[{label: "Reports", color:"#CC0000", data: data0},],{
+				xaxis: {mode: "time",
+				},legend: {show: true,
+				},
+				});		
+			});
+		</script>
+		<div id="protochart_report_chart" style="width:410px;height:310px"></div>													</div>
+					</div>
+					
+					<!-- info-container -->
+					<div class="info-container">
+						<div class="i-c-head">
+							<h3>Recent Reports</h3>
+							<ul>
+								<li class="none-separator"><a href="http://oilspill.skytruth.org/admin/reports">View All</a></li>
+								<li><a href="#" class="rss-icon">rss</a></li>
+							</ul>
+						</div>
+													<div class="post">
+								<ul class="post-info">
+									<li><a href="#" class="none">ACTIVE:</a></li>
+									<li><a href="#" class="none">VERIFIED:</a></li>
+									<li class="last"><a href="#" class="mail">SOURCE:</a></li>
+								</ul>
+								<h4><strong>4:24 AM</strong><a href="http://oilspill.skytruth.org/admin/reports/edit/12">messy in gulf islands</a></h4>
+								<p>testing to see how this goes</p>
+							</div>
+														<div class="post">
+								<ul class="post-info">
+									<li><a href="#" class="none">ACTIVE:</a></li>
+									<li><a href="#" class="ok">VERIFIED:</a></li>
+									<li class="last"><a href="#" class="mail">SOURCE:</a></li>
+								</ul>
+								<h4><strong>2:02 AM</strong><a href="http://oilspill.skytruth.org/admin/reports/edit/11">Oil on the beach</a></h4>
+								<p>ldsdslkf</p>
+							</div>
+														<div class="post">
+								<ul class="post-info">
+									<li><a href="#" class="none">ACTIVE:</a></li>
+									<li><a href="#" class="ok">VERIFIED:</a></li>
+									<li class="last"><a href="#" class="mail">SOURCE:</a></li>
+								</ul>
+								<h4><strong>3:44 AM</strong><a href="http://oilspill.skytruth.org/admin/reports/edit/10">May 2 Test Incident</a></h4>
+								<p>Yet another test</p>
+							</div>
+														<div class="post">
+								<ul class="post-info">
+									<li><a href="#" class="none">ACTIVE:</a></li>
+									<li><a href="#" class="none">VERIFIED:</a></li>
+									<li class="last"><a href="#" class="mail">SOURCE:</a></li>
+								</ul>
+								<h4><strong>3:54 AM</strong><a href="http://oilspill.skytruth.org/admin/reports/edit/9">Another test</a></h4>
+								<p>This is a nother test</p>
+							</div>
+														<div class="post">
+								<ul class="post-info">
+									<li><a href="#" class="ok">ACTIVE:</a></li>
+									<li><a href="#" class="ok">VERIFIED:</a></li>
+									<li class="last"><a href="#" class="mail">SOURCE:</a></li>
+								</ul>
+								<h4><strong>3:49 AM</strong><a href="http://oilspill.skytruth.org/admin/reports/edit/8">PRW Testing</a></h4>
+								<p>This is a test</p>
+							</div>
+													<a href="http://oilspill.skytruth.org/admin/reports" class="view-all">View All Reports</a>
+					</div>
+				</div>
+				<div class="column-1">
+					<!-- box -->
+					<div class="box">
+						<h3>Quick Stats</h3>
+						<ul class="nav-list">
+							<li>
+								<a href="http://oilspill.skytruth.org/admin/reports" class="reports">Reports</a>
+								<strong>10</strong>
+								<ul>
+									<li><a href="http://oilspill.skytruth.org/admin/reports?status=a"> Unapproved</a><strong>(4)</strong></li>
+									
+								</ul>
+							</li>
+							<li>
+								<a href="http://oilspill.skytruth.org/admin/manage" class="categories">Categories</a>
+								<strong>3</strong>
+							</li>
+							<li>
+								<a href="#" class="locations">Locations</a>
+								<strong>14</strong>
+							</li>
+							<li>
+								<a href="http://oilspill.skytruth.org/admin/manage/feeds" class="media">Incoming Media</a>
+								<strong>69</strong>
+							</li>
+							<li>
+								<a href="http://oilspill.skytruth.org/admin/messages" class="messages">Messages</a>
+								<strong>9</strong>
+								<ul>
+									<li><a href="http://oilspill.skytruth.org/admin/messages/index/1">SMS</a><strong>(0)</strong></li><li><a href="http://oilspill.skytruth.org/admin/messages/index/2">Email</a><strong>(9)</strong></li><li><a href="http://oilspill.skytruth.org/admin/messages/index/3">Twitter</a><strong>(0)</strong></li><li><a href="http://oilspill.skytruth.org/admin/messages/index/4">Laconica</a><strong>(0)</strong></li>								</ul>
+							</li>
+						</ul>
+					</div>
+					<!-- info-container -->
+					<div class="info-container">
+						<div class="i-c-head">
+							<h3>Incoming Media</h3>
+							<ul>
+								<li class="none-separator"><a href="http://oilspill.skytruth.org/admin/manage/feeds">View All</a></li>
+								<li><a href="#" class="rss-icon">rss</a></li>
+							</ul>
+						</div>
+													<div class="post">
+								<h4><a href="http://twitter.com/SkyTruth/statuses/13271795056" target="_blank">SkyTruth: Gulf #oilspill: May 2 NASA images might show slicks within 10 miles of Mobile Bay but - very cloudy, poor data - http://tinyurl.com/26y4th5</a></h4>
+								<em class="date">NEWS - May 2 2010</em>
+								<p>SkyTruth: Gulf #oilspill: May 2 NASA images might show slicks within 10 miles of Mobile Bay but - very cloudy, poor data - http://tinyurl.com/26y4th5</p>
+							</div>
+														<div class="post">
+								<h4><a href="http://twitter.com/SkyTruth/statuses/13265788433" target="_blank">SkyTruth: Gulf #oilspill: still waiting for all of today's NASA satellite imagery; mostly cloudy but some gaps show slick closer to shore - stay tuned</a></h4>
+								<em class="date">NEWS - May 2 2010</em>
+								<p>SkyTruth: Gulf #oilspill: still waiting for all of today's NASA satellite imagery; mostly cloudy but some gaps show slick closer to shore - stay tuned</p>
+							</div>
+														<div class="post">
+								<h4><a href="http://twitter.com/SkyTruth/statuses/13208688249" target="_blank">SkyTruth: Gulf #oilspill: well, sorta clear. Today's MODIS image shows main body of oil slick around leaking well site - http://tinyurl.com/27d42me</a></h4>
+								<em class="date">NEWS - May 1 2010</em>
+								<p>SkyTruth: Gulf #oilspill: well, sorta clear. Today's MODIS image shows main body of oil slick around leaking well site - http://tinyurl.com/27d42me</p>
+							</div>
+													<a href="http://oilspill.skytruth.org/admin/manage/feeds" class="view-all">View All Incoming Media</a>
+					</div>
+				</div>
+			</div>
+
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="holder">
+			<strong>
+				<a href="http://www.ushahidi.com" target="_blank" title="Ushahidi Engine" alt="Ushahidi Engine">
+                	<sup>1.0.1</sup>
+            	</a>
+			</strong>
+		</div>
+	</div>
+</body>
+</html>
