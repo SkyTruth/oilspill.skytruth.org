@@ -143,9 +143,12 @@ $("#incident_ampm option[value='"+ampm+"']").attr("selected","true");
 										}
 										?>
 									</div>
+<p>Phone Number</p>
+<?php
+$field_id = 1;
+// echo form::input('custom_field['.$field_id.']', $form['custom_field'][$field_id],' id="custom_field_'.$field_id.'" class="text custom_text"');
+?>
 								</div>
-								<div class="report_optional">
-									<h3><?php echo Kohana::lang('ui_main.reports_optional'); ?></h3>
 									<div class="report_row">
 											 <h4><?php echo Kohana::lang('ui_main.reports_first'); ?></h4>
 											 <?php print form::input('person_first', $form['person_first'], ' class="text long"'); ?>
@@ -159,7 +162,6 @@ $("#incident_ampm option[value='"+ampm+"']").attr("selected","true");
 										<?php print form::input('person_email', $form['person_email'], ' class="text long"'); ?>
 									</div>
 								</div>
-							</div>
 							<div class="report_right">
 								<?php if (!$multi_country)
 											{
