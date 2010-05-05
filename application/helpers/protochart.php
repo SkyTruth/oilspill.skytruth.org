@@ -40,45 +40,63 @@ class protochart {
 		$name = 'protochart_'.$name;
 		
 		$html = '<script type="text/javascript" charset="utf-8">
+		
+		var canvas_support = {
+		        canvas_compatible : false,
+		                // this is a sample comment to check out the svn client
+		        check_canvas : function() {
+		                try {
+		                        this.canvas_compatible = !!(document.createElement(\'canvas\').getContext(\'2d\'); // S60
+		                        } catch(e) {
+		                        this.canvas_compatible = !!(document.createElement(\'canvas\').getContext); // IE
+		                } 
+		                return this.canvas_compatible;
+		        }
+		}
+		
+		if (canvas_support != false) {		
 			Event.observe(window, \'load\', function() {
 				';
 				
-		// Compile data
-		$labels = array();
-		$i = 0;
-		foreach($data as $label => $data_array){
-			$html .= "data$i = new Array(";
-			$labels[$i] = $label;
-			$show_comma = false;
-			if(is_array($data_array)){
-				foreach($data_array as $pos => $value){
-					if($show_comma){
-						$html .= ",";
+			// Compile data
+			$labels = array();
+			$i = 0;
+			foreach($data as $label => $data_array){
+				$html .= "data$i = new Array(";
+				$labels[$i] = $label;
+				$show_comma = false;
+				if(is_array($data_array)){
+					foreach($data_array as $pos => $value){
+						if($show_comma){
+							$html .= ",";
+						}
+						$html .= "[$pos,$value]";
+						$show_comma = true;
 					}
-					$html .= "[$pos,$value]";
-					$show_comma = true;
 				}
+				$html .= ");
+				";
+				$i++;
 			}
-			$html .= ");
-			";
-			$i++;
-		}
+	
+			$html .= "new Proto.Chart($('$name'),[";
+	
+			foreach($labels as $i => $label_name){
 		
-		$html .= "new Proto.Chart($('$name'),[";
+				// Apply custom colors, otherwise use defaults.
+				$color = '';
+				if(isset($custom_color[$label_name])) $color = "color:\"#".$custom_color[$label_name]."\",";
 		
-		foreach($labels as $i => $label_name){
+				$html .= "{label: \"$label_name\", $color data: data$i},";
+			}
+	
+			$html .= "],{
+					$options
+					});		
+				});
 			
-			// Apply custom colors, otherwise use defaults.
-			$color = '';
-			if(isset($custom_color[$label_name])) $color = "color:\"#".$custom_color[$label_name]."\",";
+		}	
 			
-			$html .= "{label: \"$label_name\", $color data: data$i},";
-		}
-		
-		$html .= "],{
-				$options
-				});		
-			});
 		</script>
 		<div id=\"$name\" style=\"width:".$width."px;height:".$height."px\"></div>";
 		
