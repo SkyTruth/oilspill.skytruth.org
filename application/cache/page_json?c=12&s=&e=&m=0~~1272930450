@@ -1,7 +1,0 @@
-f6a8a52cf68a98f22fd9ca0b58ca7876f1107456{"type": "FeatureCollection","features": [{"type":"Feature","properties": {"id": "5", 
-"name":"<a href='http://oilspill.skytruth.org/reports/view/5'>Another incident</a>","category":[12], "color": "18a81f", 
-"icon": "", 
-"timestamp": "1272548880"},"geometry": {"type":"Point", "coordinates":[-89.01123, 30.249577]}},{"type":"Feature","properties": {"id": "6", 
-"name":"<a href='http://oilspill.skytruth.org/reports/view/6'>Picture test</a>","category":[12], "color": "18a81f", 
-"icon": "", 
-"timestamp": "1272548940"},"geometry": {"type":"Point", "coordinates":[-88.956299, 30.306503]}}]}
