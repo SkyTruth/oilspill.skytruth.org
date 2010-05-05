@@ -165,7 +165,22 @@ foreach ($form['custom_field'] as $field_id => $field)
 { ?>
 <div class="report_row">
 	<h4><?php echo $field['field_name'];?></h4>
-	<?php echo form::input('custom_field['.$field_id.']', $field['field_response'],' id="custom_field_'.$field_id.'" class="text custom_text"'); ?>
+	<?php switch ($field['field_type']) {
+		default:
+		case 1:
+			// Text field
+			echo form::input('custom_field['.$field_id.']', $field['field_response'],' id="custom_field_'.$field_id.'" class="text custom_text"');
+			break;
+		case 2:
+			// TextArea field
+			echo form::textarea('custom_field['.$field_id.']', $field['field_response'],' id="custom_field_'.$field_id.'" class="custom_text" rows="3"');
+			break;
+		case 6:
+			// Checkbox field
+			echo form::checkbox('custom_field['.$field_id.']', 1,0,' id="custom_field_'.$field_id.'" class="custom_text" ');
+			break;
+		}
+?>
 </div>
 <?php
 }
