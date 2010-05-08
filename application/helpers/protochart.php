@@ -46,7 +46,7 @@ class protochart {
 		                // this is a sample comment to check out the svn client
 		        check_canvas : function() {
 		                try {
-		                        this.canvas_compatible = !!(document.createElement(\'canvas\').getContext(\'2d\'); // S60
+		                        this.canvas_compatible = !!(document.createElement(\'canvas\').getContext(\'2d\')); // S60
 		                        } catch(e) {
 		                        this.canvas_compatible = !!(document.createElement(\'canvas\').getContext); // IE
 		                } 
@@ -99,7 +99,6 @@ class protochart {
 			
 		</script>
 		<div id=\"$name\" style=\"width:".$width."px;height:".$height."px\"></div>";
-		
 		return $html;
 	}
 
