@@ -327,9 +327,14 @@ foreach ($form['custom_field'] as $field_id => $field)
 								</div>
 													
 								<div class="report_row">
-									<input name="submit" type="submit" value="<?php echo Kohana::lang('ui_main.reports_btn_submit'); ?>" class="btn_submit" /> 
 								</div>
 							</div>
+<textarea style="width: 800px; font-size:8pt" rows=5>
+I hereby acknowledge that, by participating on SkyTruth's Gulf Oil Spill Tracker site, I am assuming responsibility for the accuracy and validity of any information I provide, and am relinquishing rights and ownership of said information to the operators of this site. 
+I further acknowledge that collecting information to participate in Gulf Oil Spill Tracker could involve potential risk of injury, including but not limited to slipping and falling into a body of water, exposure to toxic oil and other chemicals, and exposure to natural elements such as heat, foliage and wildlife. I accept full responsibility for those risks. 
+On behalf of myself and my minor child, if any, I do hereby release and forever discharge SkyTruth, Surfrider, Ocean Conservancy, and their officers, trustees, employees, agents, servants and representatives from any and all claims, demands, actions, causes of action, judgments, expenses, injuries to person(s) or damage to property sustained or incurred in connection with, or as a result of my participation in the Gulf Oil Spill Tracker site. I agree to hold SkyTruth, Surfrider, and Ocean Conservancy wholly harmless for any and all liability, loss, expense, or damage they may incur by virtue of my participation in the aforementioned event. 
+</textarea><br/>
+									<input name="submit" type="submit" value="<?php echo Kohana::lang('ui_main.reports_btn_submit'); ?>" class="btn_submit" /> 
 						</div>
 						<?php print form::close(); ?>
 						<!-- end report form block -->
