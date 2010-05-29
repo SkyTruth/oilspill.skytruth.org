@@ -104,7 +104,11 @@
 
 		<!-- header -->
 		<div id="header">
-	
+<div id="sponsor-logos">
+<a href="http://www.skytruth.org/"><img src="http://oilspill.skytruth.org/media/img/skytruth-logo.gif"/></a>
+<a href="http://www.surfrider.org/"><img src="http://oilspill.skytruth.org/media/img/SF-color-jpg-2007.jpg" height="60"/></a>
+<a href="http://www.oceanconservancy.org/"><img src="http://oilspill.skytruth.org/media/img/ocean-conservancy-logo.jpg" height="60"/></a>
+</div>	
 			<!-- searchbox -->
 			<div id="searchbox">
 				<a class="share addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aee423643f8276e">Share</a>
