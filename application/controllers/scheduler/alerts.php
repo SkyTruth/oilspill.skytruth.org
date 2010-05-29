@@ -22,7 +22,10 @@ class Alerts_Controller extends Controller
 	
 	public function index() 
 	{
+
+
 		$settings = kohana::config('settings');
+
 		$site_name = $settings['site_name'];
 		$alerts_email = $settings['alerts_email'];
 		$unsubscribe_message = Kohana::lang('alerts.unsubscribe')
@@ -62,6 +65,7 @@ class Alerts_Controller extends Controller
 			
 			foreach ($alertees as $alertee)
 			{
+
 				// Has this alert been sent to this alertee?
 				if ($alertee->id == $incident->alert_id)
 					continue;
@@ -123,7 +127,6 @@ class Alerts_Controller extends Controller
 						$message = $incident->incident_description
 									."<p>".$unsubscribe_message
 									.$alertee->alert_code."</p>";
-
 						if (email::send($to, $from, $subject, $message, TRUE) == 1)
 						{
 							$alert = ORM::factory('alert_sent');
