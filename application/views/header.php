@@ -96,6 +96,10 @@
 		}	
 		<?php echo $js . "\n"; ?>
 	</script>
+
+<!-- Facebook share image -->
+
+	<link rel="image_src" href="http://oilspill.skytruth.org/themes/skytruth/Oilspillsharemap.gif" />
 </head>
 
 <body id="page">
