@@ -36,9 +36,9 @@
 								<div class="report_col4">
 									<strong>LOCATION</strong>
 								</div>
-								<div class="report_col5">
+								<!-- div class="report_col5">
 									<strong>VERIFIED?</strong>
-								</div>
+								</div -->
 							</div>
 							<?php
 								foreach ($incidents as $incident)
@@ -79,9 +79,9 @@
 									echo "		<div class=\"report_location report_col4\">";
 									echo $incident_location;
 									echo "		</div>";
-									echo "		<div class=\"report_status report_col5\">";
+									echo "		<!-- div class=\"report_status report_col5\">";
 									echo $incident_verified;
-									echo "		</div>";
+									echo "		</div -->";
 									echo "</div>";
 								}
 							?>
