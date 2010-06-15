@@ -451,6 +451,7 @@ div.graph-holder {
     height:150px;
     overflow:hidden;
     width:573px;
+    visibility:hidden;
 }
 
 div.slider-holder {
