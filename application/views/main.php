@@ -21,6 +21,33 @@
 				
 						<!-- right column -->
 						<div id="right" class="clearingfix">
+
+
+							<!-- additional content -->
+							<div class="additional-content">
+								<h5><?php echo Kohana::lang('ui_main.how_to_report'); ?></h5>
+								<ol>
+									<?php if (!empty($phone_array)) 
+									{ ?><li>By sending a message to <?php foreach ($phone_array as $phone) {
+										echo "<strong>". $phone ."</strong>";
+										if ($phone != end($phone_array)) {
+											echo " or ";
+										}
+									} ?></li><?php } ?>
+									<?php if (!empty($report_email)) 
+									{ ?><li>By sending an email to <a href="mailto:<?php echo $report_email?>"><?php echo $report_email?></a></li><?php } ?>
+									<?php if (!empty($twitter_hashtag_array)) 
+												{ ?><li>By sending a tweet with the hashtag/s <?php foreach ($twitter_hashtag_array as $twitter_hashtag) {
+									echo "<strong>". $twitter_hashtag ."</strong>";
+									if ($twitter_hashtag != end($twitter_hashtag_array)) {
+										echo " or ";
+									}
+									} ?></li><?php } ?>
+									<li>By <a href="<?php echo url::base() . 'reports/submit/'; ?>">filling a form</a> at the website</li>
+								</ol>					
+		
+							</div>
+							<!-- / additional content -->
 					
 							<!-- category filters -->
 							<div class="cat-filters clearingfix">
@@ -82,31 +109,6 @@
 							
 							<br />
 						
-							<!-- additional content -->
-							<div class="additional-content">
-								<h5><?php echo Kohana::lang('ui_main.how_to_report'); ?></h5>
-								<ol>
-									<?php if (!empty($phone_array)) 
-									{ ?><li>By sending a message to <?php foreach ($phone_array as $phone) {
-										echo "<strong>". $phone ."</strong>";
-										if ($phone != end($phone_array)) {
-											echo " or ";
-										}
-									} ?></li><?php } ?>
-									<?php if (!empty($report_email)) 
-									{ ?><li>By sending an email to <a href="mailto:<?php echo $report_email?>"><?php echo $report_email?></a></li><?php } ?>
-									<?php if (!empty($twitter_hashtag_array)) 
-												{ ?><li>By sending a tweet with the hashtag/s <?php foreach ($twitter_hashtag_array as $twitter_hashtag) {
-									echo "<strong>". $twitter_hashtag ."</strong>";
-									if ($twitter_hashtag != end($twitter_hashtag_array)) {
-										echo " or ";
-									}
-									} ?></li><?php } ?>
-									<li>By <a href="<?php echo url::base() . 'reports/submit/'; ?>">filling a form</a> at the website</li>
-								</ol>					
-		
-							</div>
-							<!-- / additional content -->
 					
 						</div>
 						<!-- / right column -->
