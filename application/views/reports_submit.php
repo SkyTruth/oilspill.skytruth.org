@@ -144,8 +144,6 @@ $("#incident_ampm option[value='"+ampm+"']").attr("selected","true");
 										?>
 									</div>
 								</div>
-								<div class="report_optional">
-									<h3><?php echo Kohana::lang('ui_main.reports_optional'); ?></h3>
 									<div class="report_row">
 											 <h4><?php echo Kohana::lang('ui_main.reports_first'); ?></h4>
 											 <?php print form::input('person_first', $form['person_first'], ' class="text long"'); ?>
@@ -158,8 +156,36 @@ $("#incident_ampm option[value='"+ampm+"']").attr("selected","true");
 										<h4><?php echo Kohana::lang('ui_main.reports_email'); ?></h4>
 										<?php print form::input('person_email', $form['person_email'], ' class="text long"'); ?>
 									</div>
+
+
+<?php
+// OUTPUT CUSTOM FIELDS
+// echo "<pre>" . print_r($form['custom_field']) . "</pre>";
+foreach ($form['custom_field'] as $field_id => $field)
+{ ?>
+<div class="report_row">
+	<h4><?php echo $field['field_name'];?></h4>
+	<?php switch ($field['field_type']) {
+		default:
+		case 1:
+			// Text field
+			echo form::input('custom_field['.$field_id.']', $field['field_response'],' id="custom_field_'.$field_id.'" class="text custom_text"');
+			break;
+		case 2:
+			// TextArea field
+			echo form::textarea('custom_field['.$field_id.']', $field['field_response'],' id="custom_field_'.$field_id.'" class="custom_text" rows="3"');
+			break;
+		case 6:
+			// Checkbox field
+			echo form::checkbox('custom_field['.$field_id.']', 1,0,' id="custom_field_'.$field_id.'" class="custom_text" ');
+			break;
+		}
+?>
+</div>
+<?php
+}
+?>
 								</div>
-							</div>
 							<div class="report_right">
 								<?php if (!$multi_country)
 											{
@@ -177,7 +203,7 @@ $("#incident_ampm option[value='"+ampm+"']").attr("selected","true");
 										<?php print form::input('location_find', '', ' title="City, State and/or Country" class="findtext"'); ?>
 										<div style="float:left;margin:9px 0 0 5px;"><input type="button" name="button" id="button" value="Find Location" class="btn_find" /></div>
 										<div id="find_loading" class="report-find-loading"></div>
-										<div style="clear:both;" id="find_text">* If you can't find your location, please click on the map to pinpoint the correct location.</div>
+										<div style="clear:both;" id="find_text">* If you can't find your location, please click on the map to pinpoint the correct location.<br/>You can also enter a lat/long in decimal form - e.g. 29.26723, -89.89014</div>
 									</div>
 								</div>
 								
@@ -301,9 +327,14 @@ $("#incident_ampm option[value='"+ampm+"']").attr("selected","true");
 								</div>
 													
 								<div class="report_row">
-									<input name="submit" type="submit" value="<?php echo Kohana::lang('ui_main.reports_btn_submit'); ?>" class="btn_submit" /> 
 								</div>
 							</div>
+<textarea style="width: 800px; font-size:8pt" rows=5>
+I hereby acknowledge that, by participating on SkyTruth's Gulf Oil Spill Tracker site, I am assuming responsibility for the accuracy and validity of any information I provide, and am relinquishing rights and ownership of said information to the operators of this site. 
+I further acknowledge that collecting information to participate in Gulf Oil Spill Tracker could involve potential risk of injury, including but not limited to slipping and falling into a body of water, exposure to toxic oil and other chemicals, and exposure to natural elements such as heat, foliage and wildlife. I accept full responsibility for those risks. 
+On behalf of myself and my minor child, if any, I do hereby release and forever discharge SkyTruth, Surfrider, Ocean Conservancy, and their officers, trustees, employees, agents, servants and representatives from any and all claims, demands, actions, causes of action, judgments, expenses, injuries to person(s) or damage to property sustained or incurred in connection with, or as a result of my participation in the Gulf Oil Spill Tracker site. I agree to hold SkyTruth, Surfrider, and Ocean Conservancy wholly harmless for any and all liability, loss, expense, or damage they may incur by virtue of my participation in the aforementioned event. 
+</textarea><br/>
+									<input name="submit" type="submit" value="<?php echo Kohana::lang('ui_main.reports_btn_submit'); ?>" class="btn_submit" /> 
 						</div>
 						<?php print form::close(); ?>
 						<!-- end report form block -->

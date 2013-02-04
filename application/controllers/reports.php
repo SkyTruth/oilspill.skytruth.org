@@ -242,7 +242,8 @@ class Reports_Controller extends Main_Controller {
 			'incident_photo' => array(),
 			'person_first' => '',
 			'person_last' => '',
-			'person_email' => ''
+			'person_email' => '',
+			'custom_field' => array()		
 		);
 		//copy the form as errors, so the errors will be stored with keys corresponding to the form field names
 		$errors = $form;
@@ -253,7 +254,8 @@ class Reports_Controller extends Main_Controller {
 		$form['incident_hour'] = "12";
 		$form['incident_minute'] = "00";
 		$form['incident_ampm'] = "pm";
-		
+                // initialize custom field array
+                $form['custom_field'] = $this->_get_custom_form_fields();		
 		// check, has the form been submitted, if so, setup validation
 		if ($_POST)
 		{
@@ -449,7 +451,20 @@ class Reports_Controller extends Main_Controller {
 				$person->person_email = $post->person_email;
 				$person->person_date = date("Y-m-d H:i:s",time());
 				$person->save();
-				
+			
+
+				// STEP 6: SAVE CUSTOM FIELDS
+                                if(isset($post->custom_field))
+                                {
+                                        foreach($post->custom_field as $key => $value)
+                                        {
+                                        	$form_response = new Form_Response_Model();
+                                                $form_response->form_field_id = $key;
+                                                $form_response->incident_id = $incident->id;
+                                                $form_response->form_response = $value;
+                                                $form_response->save();
+                                        }
+                                }
 				
 				// Notify Admin Of New Report
 				$send = notifications::notify_admins(
@@ -638,7 +653,14 @@ class Reports_Controller extends Main_Controller {
 					{
 						$comment->comment_spam = 0;
 						$comment->comment_active = 1;
-					} 
+					}
+
+// +== PRW BEGIN HACK
+// Force comments to be moderated, but not spam
+	$comment->comment_spam = 0;
+	$comment->comment_active = 0;
+
+// +== PRW END HACK 
 					$comment->save();
 					
 					// Notify Admin Of New Comment

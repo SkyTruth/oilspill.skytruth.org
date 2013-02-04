@@ -96,6 +96,22 @@
 		}	
 		<?php echo $js . "\n"; ?>
 	</script>
+
+<!-- Facebook share image -->
+
+	<link rel="image_src" href="http://oilspill.skytruth.org/themes/skytruth/Oilspillsharemap.gif" />
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25593503-1']);
+  _gaq.push(['_setDomainName', '.skytruth.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>	
 </head>
 
 <body id="page">
@@ -104,7 +120,11 @@
 
 		<!-- header -->
 		<div id="header">
-	
+<div id="sponsor-logos">
+<a href="http://www.skytruth.org/"><img src="http://oilspill.skytruth.org/media/img/skytruth-logo.gif"/></a>
+<a href="http://www.surfrider.org/"><img src="http://oilspill.skytruth.org/media/img/SF-color-jpg-2007.jpg" height="60"/></a>
+<a href="http://www.oceanconservancy.org/"><img src="http://oilspill.skytruth.org/media/img/ocean-conservancy-logo.jpg" height="60"/></a>
+</div>	
 			<!-- searchbox -->
 			<div id="searchbox">
 				<a class="share addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=xa-4aee423643f8276e">Share</a>

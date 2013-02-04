@@ -235,11 +235,15 @@
 			}
 			
 			map.addLayer(map_layer);
-			
-			map.addControl(new OpenLayers.Control.Navigation());
-			map.addControl(new OpenLayers.Control.PanZoomBar());
-			map.addControl(new OpenLayers.Control.MousePosition());
-			
+
+                        map.addControl(new OpenLayers.Control.Navigation());
+$(".olControlNavigation").css({"right":"55px"});
+                        map.addControl(new OpenLayers.Control.PanZoomBar());
+$(".olControlPanZoomBar").css({"top":"25px"});
+                        map.addControl(new OpenLayers.Control.MousePosition());
+$(".olControlMousePosition").css({"bottom":"2px"});
+$(".olControlMousePosition").css({"right":"2px"});
+
 			// Create the markers layer
 			var markers = new OpenLayers.Layer.Markers("Markers");
 			map.addLayer(markers);

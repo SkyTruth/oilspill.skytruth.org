@@ -72,5 +72,8 @@ $lang = array(
 	'alerts_rss' => 'RSS Feeds (copy the url below)',
 	'alerts_btn_send' => 'Save My Alert',
 	'alert_confirm_previous' => 'Confirm A Previous Alert Request',
-	'layers_filter' => 'Other Layers'
+	'layers_filter' => 'Other Layers',
+	'login' => 'Login'
+
 );
+

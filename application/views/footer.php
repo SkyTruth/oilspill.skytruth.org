@@ -39,6 +39,7 @@
 					<li><a href="<?php echo url::base() . "help" ?>"><?php echo Kohana::lang('ui_main.help'); ?></a></li>
 					<li><a href="<?php echo url::base() . "page/index/1" ?>"><?php echo Kohana::lang('ui_main.about'); ?></a></li>
 					<li><a href="<?php echo url::base() . "contact" ?>"><?php echo Kohana::lang('ui_main.contact'); ?></a></li>
+					<li><a href="<?php echo url::base() . "admin" ?>"><?php echo Kohana::lang('ui_main.login'); ?></a></li>
 				</ul>
 				<p><?php echo Kohana::lang('ui_main.copyright'); ?></p>
 			</div>

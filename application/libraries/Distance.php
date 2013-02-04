@@ -48,9 +48,21 @@ class Distance_Core
 				+ cos($latitude) * cos($latitude2)
 				* cos($longitude2 - $longitude);
 
-			$dist = 
-				$EARTH_RADIUS_MILES
-				* (-1 * atan($dist / sqrt(1 - $dist * $dist)) + M_PI / 2);
+			// PRW BEGIN 2011-10-10
+			// Test for the case where $dist is exactly equal to 1
+			// This happens when the two locations are very close
+			// but not exactly equal, and it causes a divide by 0
+			// in the final disatnce comuptation below
+
+			//$dist = $EARTH_RADIUS_MILES	* (-1 * atan($dist / sqrt(1 - $dist * $dist)) + M_PI / 2);
+
+			if ($dist!=1){
+			$dist = $EARTH_RADIUS_MILES * (-1 * atan($dist / sqrt(1 - $dist * $dist)) + M_PI / 2);
+			}else{
+			$dist=0;
+			} 
+
+			// PRW END 
 		}
 		
 		if ($in_kms)

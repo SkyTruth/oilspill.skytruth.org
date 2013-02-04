@@ -317,7 +317,7 @@ div.search-form input.searchbtn{
 
 /* submit incident */
 div.submit-incident{
-    margin: 80px 0 0 0;
+    margin: 30px 0 0 0;
     float: right;
     width: 300px;
 }
@@ -451,6 +451,7 @@ div.graph-holder {
     height:150px;
     overflow:hidden;
     width:573px;
+    visibility:hidden;
 }
 
 div.slider-holder {
