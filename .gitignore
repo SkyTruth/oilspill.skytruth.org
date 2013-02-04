@@ -1,0 +1,5 @@
+.svn
+media/uploads
+application/logs
+application/cache
+dump-*.sql
