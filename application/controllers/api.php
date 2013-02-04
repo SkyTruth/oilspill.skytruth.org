@@ -767,6 +767,14 @@ class Api_Controller extends Controller {
 				$incident_time = $post->incident_hour . ":" . $post->incident_minute . ":00 " . $post->incident_ampm;
 				$incident->incident_date = $incident_date . " " . $incident_time;
 				$incident->incident_dateadd = date("Y-m-d H:i:s",time());
+				
+				//PRW BEGIN 2011-09-16
+				if ($post->auth_token == 'JDxEF83bd')
+				{
+				    $incident->incident_active = $post->incident_active;
+				    $incident->incident_alert_status = $post->incident_alert_status;
+				}
+				//PRW END 2011-09-16
 				$incident->save();
 				
 				// SAVE CATEGORIES

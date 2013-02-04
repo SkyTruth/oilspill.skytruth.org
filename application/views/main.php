@@ -157,24 +157,49 @@
 								</div>
 								<?php } ?>
 								<!-- / map -->
-								<div id="graph" class="graph-holder"></div>
-							</div>
+
+
+
+
+						<!-- News block -->
+						<div >
+							<h5><?php echo Kohana::lang('ui_main.official_news'); ?></h5>
+							<table class="table-list">
+								<thead>
+									<tr>
+										<th scope="col"><?php echo Kohana::lang('ui_main.title'); ?></th>
+										<th scope="col"><?php echo Kohana::lang('ui_main.source'); ?></th>
+										<th scope="col"><?php echo Kohana::lang('ui_main.date'); ?></th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php
+									foreach ($feeds as $feed)
+									{
+										$feed_id = $feed->id;
+										$feed_title = text::limit_chars($feed->item_title, 40, '...', True);
+										$feed_link = $feed->item_link;
+										$feed_date = date('M j Y', strtotime($feed->item_date));
+										$feed_source = text::limit_chars($feed->feed->feed_name, 15, "...");
+									?>
+									<tr>
+										<td><a href="<?php echo $feed_link; ?>" target="_blank"><?php echo $feed_title ?></a></td>
+										<td><?php echo $feed_source; ?></td>
+										<td><?php echo $feed_date; ?></td>
+									</tr>
+									<?php
+									}
+									?>
+								</tbody>
+							</table>
+							<a class="more" href="<?php echo url::base() . 'feeds' ?>">View More...</a>
 						</div>
-						<!-- / content column -->
-				
-					</div>
-				</div>
-				<!-- / main body -->
-			
-				<!-- content -->
-				<div class="content-container">
-			
-					<!-- content blocks -->
-					<div class="content-blocks clearingfix">
-				
-						<!-- left content block -->
-						<div class="content-block-left">
-							<h5><?php echo Kohana::lang('ui_main.incidents_listed'); ?></h5>
+						<!-- / news block -->
+
+
+						<!-- incident list block -->
+						<div >
+							<h5><br/><br/><br/><?php echo Kohana::lang('ui_main.incidents_listed'); ?></h5>
 							<table class="table-list">
 								<thead>
 									<tr>
@@ -213,42 +238,24 @@
 							</table>
 							<a class="more" href="<?php echo url::base() . 'reports/' ?>">View More...</a>
 						</div>
-						<!-- / left content block -->
-				
-						<!-- right content block -->
-						<div class="content-block-right">
-							<h5><?php echo Kohana::lang('ui_main.official_news'); ?></h5>
-							<table class="table-list">
-								<thead>
-									<tr>
-										<th scope="col"><?php echo Kohana::lang('ui_main.title'); ?></th>
-										<th scope="col"><?php echo Kohana::lang('ui_main.source'); ?></th>
-										<th scope="col"><?php echo Kohana::lang('ui_main.date'); ?></th>
-									</tr>
-								</thead>
-								<tbody>
-									<?php
-									foreach ($feeds as $feed)
-									{
-										$feed_id = $feed->id;
-										$feed_title = text::limit_chars($feed->item_title, 40, '...', True);
-										$feed_link = $feed->item_link;
-										$feed_date = date('M j Y', strtotime($feed->item_date));
-										$feed_source = text::limit_chars($feed->feed->feed_name, 15, "...");
-									?>
-									<tr>
-										<td><a href="<?php echo $feed_link; ?>" target="_blank"><?php echo $feed_title ?></a></td>
-										<td><?php echo $feed_source; ?></td>
-										<td><?php echo $feed_date; ?></td>
-									</tr>
-									<?php
-									}
-									?>
-								</tbody>
-							</table>
-							<a class="more" href="<?php echo url::base() . 'feeds' ?>">View More...</a>
+						<!-- / incident list block -->
+
+
+								<div id="graph" class="graph-holder"></div>
+							</div>
 						</div>
-						<!-- / right content block -->
+						<!-- / content column -->
+				
+					</div>
+				</div>
+				<!-- / main body -->
+			
+				<!-- content -->
+				<div class="content-container">
+			
+					<!-- content blocks -->
+					<div class="content-blocks clearingfix">
+				
 				
 					</div>
 					<!-- /content blocks -->

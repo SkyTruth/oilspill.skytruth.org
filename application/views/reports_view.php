@@ -306,6 +306,7 @@
 							<?php print form::input('captcha', $form['captcha'], ' class="text"'); ?>
 						</div>
 						<div class="report_row">
+NOTE: Comments will be reviewed by a moderator before they become visible on the website.<br/>
 							<input name="submit" type="submit" value="Submit Comment" class="btn_blue" />
 						</div>
 						<?php print form::close(); ?>
