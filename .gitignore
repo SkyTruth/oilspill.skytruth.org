@@ -3,3 +3,4 @@ media/uploads
 application/logs
 application/cache
 dump-*.sql
+application/config/database.php
