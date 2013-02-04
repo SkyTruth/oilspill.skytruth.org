@@ -245,6 +245,10 @@ class Main_Controller extends Template_Controller {
 			$active_endDate = strtotime($active_year . "-" . $active_month . 
 				"-" . date('t', mktime(0,0,0,$active_month,1))." 23:59:59");
 		}
+// BEGIN PRW
+
+	$active_endDate = time();
+// END PRW
 		
         // Next, Get the Range of Years
         $query = $db->query('SELECT DATE_FORMAT(incident_date, \'%Y\') AS incident_date FROM incident WHERE incident_active = 1 GROUP BY DATE_FORMAT(incident_date, \'%Y\') ORDER BY incident_date');
@@ -275,11 +279,9 @@ class Main_Controller extends Template_Controller {
                     $i = "0" . $i;
                 }
                 $endDate .= "<option value=\"" . strtotime($years . "-" . $i . "-" . date('t', mktime(0,0,0,$i,1))." 23:59:59") . "\"";
-                if ( $active_month && 
-						( ( (int) $i == ( $active_month + 1)) )
-						 	|| $i == 12)
-				{
-					$endDate .= " selected=\"selected\" ";
+                if ( $active_month && ( ( (int) $i == ( $active_month + 1)) ))
+		{
+			$endDate .= " selected=\"selected\" ";
                 }
                 $endDate .= ">" . date('M', mktime(0,0,0,$i,1)) . " " . $years . "</option>";
             }

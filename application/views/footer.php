@@ -25,7 +25,8 @@
  
 			<!-- footer credits -->
 			<div class="footer-credits">
-				Powered by <a href="http://www.ushahidi.com/"><img src="<?php echo url::base(); ?>/media/img/footer-logo.png" alt="Ushahidi" align="absmiddle" /></a>
+				Hosted by <br/><img src="<?php echo url::base(); ?>/media/img/skytruth-logo.gif" /><br/><br/>
+				Powered by <br/><a href="http://www.ushahidi.com/"><img src="<?php echo url::base(); ?>/media/img/footer-logo.png" alt="Ushahidi" align="absmiddle" /></a>
 			</div>
 			<!-- / footer credits -->
 		
@@ -36,9 +37,8 @@
 					<li><a href="<?php echo url::base() . "reports/submit" ?>"><?php echo Kohana::lang('ui_main.report_an_incident'); ?></a></li>
 					<li><a href="<?php echo url::base() . "alerts" ?>"><?php echo Kohana::lang('ui_main.alerts'); ?></a></li>
 					<li><a href="<?php echo url::base() . "help" ?>"><?php echo Kohana::lang('ui_main.help'); ?></a></li>
-					<li><a href="#"><?php echo Kohana::lang('ui_main.about'); ?></a></li>
-					<li><a href="#"><?php echo Kohana::lang('ui_main.contact'); ?></a></li>
-					<li><a href="#"><?php echo Kohana::lang('ui_main.blog'); ?></a></li>
+					<li><a href="<?php echo url::base() . "page/index/1" ?>"><?php echo Kohana::lang('ui_main.about'); ?></a></li>
+					<li><a href="<?php echo url::base() . "contact" ?>"><?php echo Kohana::lang('ui_main.contact'); ?></a></li>
 				</ul>
 				<p><?php echo Kohana::lang('ui_main.copyright'); ?></p>
 			</div>
@@ -62,16 +62,16 @@
 									print(empty($errors['feedback_message'])) ?'': $errors['feedback_message'].'<br /><br />';
 								?>
 							</td>
-							<td>
+							<!-- PRW td>
 								<div class="or_txt">
 									Or
 								</div>
-							</td>
-							<td>
+							</td PRW -->
+							<!-- PRW td>
 								<div class="detailed_feedback">
 									<a href="http://feedback.ushahidi.com/fillsurvey.php?sid=5">Provide Detailed Feedback</a>
 								</div>
-							</td>
+							</td PRW -->
 						</tr>
 						<tr>
 							<td>

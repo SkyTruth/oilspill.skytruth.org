@@ -167,7 +167,7 @@ class Feedback_Controller extends Admin_Controller
 		//has form been submitted, if so setup validation
 		if($_POST)
 		{
-			
+				
 			$post = Validation::factory($_POST);
 			
 			//Trim whitespaces
@@ -176,7 +176,8 @@ class Feedback_Controller extends Admin_Controller
 			//Add validation rules
 			$post->add_rules('feedback_message','required');
 			$post->add_rules('person_email','email', 'length[3,100]');
-		
+			$post->feedback_title = "Feedback Reply";
+
 			if( $post->validate() ) { 	
 				$sent = $this->_email_reply( $post->person_email,
 					$post->feedback_message,$post->feedback_title );

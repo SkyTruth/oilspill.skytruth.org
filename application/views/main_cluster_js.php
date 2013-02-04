@@ -75,17 +75,47 @@
 			}
 			else
 			{
-				map_layer = new OpenLayers.Layer.Google("google", {
+// BEGIN PRW
+				map_layer = new OpenLayers.Layer.Google("Google Streets", {
 					sphericalMercator: true,
 					maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
 					});
+
+//map.addLayer(map_layer);
+//map_layer = new OpenLayers.Layer.Google( "Google Hybrid" , {
+//					sphericalMercator: true,
+//					maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34),
+//	type: G_HYBRID_MAP 
+//	});
+// END PRW
+
+
 			}
 			map.addLayer(map_layer);
-			
+		
+/* var poly_test_layer = new OpenLayers.Layer.Vector("SpillTest", 
+{
+	projection: map.displayProjection,
+	strategies: [new OpenLayers.Strategy.Fixed()],
+	protocol: new OpenLayers.Protocol.HTTP({
+                    url: "media/uploads/test.kml",
+                    format: new OpenLayers.Format.KML({
+                        extractStyles: true,
+                        extractAttributes: true
+                    })
+		})
+});
+map.addLayer(poly_test_layer);
+*/
+	
 			// Add Controls
 			map.addControl(new OpenLayers.Control.Navigation());
+$(".olControlNavigation").css({"right":"55px"}); 
 			map.addControl(new OpenLayers.Control.PanZoomBar());
+$(".olControlPanZoomBar").css({"top":"25px"}); 
 			map.addControl(new OpenLayers.Control.MousePosition());
+$(".olControlMousePosition").css({"bottom":"2px"}); 
+$(".olControlMousePosition").css({"right":"2px"}); 
 			map.addControl(new OpenLayers.Control.LayerSwitcher());		
 			gMap = map;
 			
@@ -717,7 +747,24 @@
 				currCenter = map.getCenter();
 				
 				// Add New Layer
-				addMarkers('', '', '', currZoom, currCenter, '', layerID, 'layers', layerURL, layerColor);
+// BEGIN PRW
+new_layer = new OpenLayers.Layer.Vector("Layer_"+ layerID, 
+{
+        projection: map.displayProjection,
+        strategies: [new OpenLayers.Strategy.Fixed()],
+        protocol: new OpenLayers.Protocol.HTTP({
+                    url: layerURL,
+                    format: new OpenLayers.Format.KML({
+                        extractStyles: true,
+                        extractAttributes: true
+                    })
+                })
+});
+map.addLayer(new_layer);
+
+//				addMarkers('', '', '', currZoom, currCenter, '', layerID, 'layers', layerURL, layerColor);
+
+// END PRW
 			}
 		}
 		

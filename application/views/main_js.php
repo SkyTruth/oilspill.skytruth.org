@@ -70,6 +70,11 @@
 					sphericalMercator: true,
 					maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
 					});
+
+// BEGIN PRW
+//var google_hybrid_layer = new OpenLayers.Layer.Google( "Google Hybrid" , {type: G_HYBRID_MAP });
+//map.addLayer(google_hybrid_layer);
+// END PRW
 			}
 			map.addLayer(map_layer);
 			

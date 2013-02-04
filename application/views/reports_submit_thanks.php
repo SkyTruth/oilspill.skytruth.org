@@ -25,14 +25,15 @@
 		
 								<div class="thanks_msg"><a href="<?php echo
 									url::base().'reports' ?>">Return to the reports page</a><br /><br /><br />
-									Please give us feedback about your experience by clicking on the button below.<br /><br />
-									<?php 
+									Your submission has been recieved. Please give our volunteers some time to process and validate it before it appears on the map.<br /><br />
+									<?php
+/* PRW 
 									print form::open('http://feedback.ushahidi.com/fillsurvey.php?sid=2', array('target'=>'_blank'));
 									print form::hidden('alert_code', $_SERVER['SERVER_NAME']);
 									print "&nbsp;&nbsp;";
 									print form::submit('button', Kohana::lang('ui_main.feedback'), ' class=btn_gray ');
 									print form::close();
-									?>
+PRW */									?>
 								</div>
 							</div>
 						</div>

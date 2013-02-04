@@ -21,7 +21,7 @@
 							<h1>Get Alerts</h1>
 							
 							<!-- Mobile Alert -->
-							<div class="green-box">
+							<!-- div class="green-box">
 								<?php
 								if ($alert_mobile)
 								{
@@ -50,7 +50,7 @@
 										?>
 									</div>
 								</div>
-							</div>
+							</div -->
 							<!-- / Mobile Alert -->
 							
 							

@@ -68,7 +68,7 @@
 								<div class="step-2">
 									<h2><?php echo Kohana::lang('ui_main.alerts_step2_send_alerts'); ?></h2>
 									<div class="holder">
-										<div class="box">
+										<!-- div class="box">
 											<label>
 												<?php
 													if ($form['alert_mobile_yes'] == 1) {
@@ -83,7 +83,7 @@
 												<span><strong><?php echo Kohana::lang('ui_main.alerts_mobile_phone'); ?></strong><br /><?php echo Kohana::lang('ui_main.alerts_enter_mobile'); ?></span>
 											</label>
 											<span><?php print form::input('alert_mobile', $form['alert_mobile'], ' class="text long"'); ?></span>
-										</div>
+										</div -->
 										<div class="box">
 											<label>
 												<?php

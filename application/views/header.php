@@ -133,8 +133,7 @@
 		
 			<!-- logo -->
 			<div id="logo">
-				<h1><?php echo $site_name; ?></h1>
-				<span><?php echo $site_tagline; ?></span>
+				<h1><img src="<?php echo url::base() . "themes/skytruth/tracker_logo.png" ?>" alt="<?php echo $site_name; ?>"/></h1>
 			</div>
 			<!-- / logo -->
 		
